@@ -82,7 +82,6 @@ public class MaquinaExpendedoraMejorada {
             numeroBilletesVendidos = (numeroBilletesVendidos + 1 );
         }else {
             System.out.println("Itroduce" + cantidadDeDineroQueFalta + "euros más");
-            numeroBilletesVendidos = 0;
         }
     }
     
