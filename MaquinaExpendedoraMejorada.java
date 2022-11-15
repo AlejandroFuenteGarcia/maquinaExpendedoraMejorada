@@ -10,6 +10,8 @@ public class MaquinaExpendedoraMejorada {
     private String estacionOrigen;
     // El destino del billete
     private String estacionDestino;
+    
+    private int numeroBilletesVendidos;
 
     /**
      * Crea una maquina expendedora de billetes de tren con el 
@@ -22,6 +24,7 @@ public class MaquinaExpendedoraMejorada {
         totalDineroAcumulado = 0;
         estacionOrigen = origen;
         estacionDestino = destino;
+        numeroBilletesVendidos = 0;
     }
     public MaquinaExpendedoraMejorada(){
         precioBillete = 20;
@@ -29,6 +32,7 @@ public class MaquinaExpendedoraMejorada {
         estacionDestino = "Salamanca";
         balanceClienteActual = 0;
         totalDineroAcumulado = 0;
+        numeroBilletesVendidos = 0;
     }
     /**
      * Devuelve el precio del billete
@@ -75,7 +79,7 @@ public class MaquinaExpendedoraMejorada {
             totalDineroAcumulado = totalDineroAcumulado + precioBillete;
             // Reduce el balance del cliente actual dejandole seguir utilizando la maquina
             balanceClienteActual = balanceClienteActual - precioBillete;
-        
+            numeroBilletesVendidos = (numeroBilletesVendidos + 1 );
         }else {
             System.out.println("Itroduce" + cantidadDeDineroQueFalta + "euros más");
         }
@@ -92,19 +96,17 @@ public class MaquinaExpendedoraMejorada {
         return cantidadDeDineroADevolver;
     }
     public int getNumeroDeBilletesVendidos(){
-        int NumeroDeBilletesVendidos = 0;
-        if (totalDineroAcumulado >= precioBillete){
-            NumeroDeBilletesVendidos = totalDineroAcumulado / precioBillete;
+        if (numeroBilletesVendidos > 0){
+            numeroBilletesVendidos = numeroBilletesVendidos ;
         } else{
-            NumeroDeBilletesVendidos = 0;
+            numeroBilletesVendidos = 0;
         }
-        return NumeroDeBilletesVendidos;
+        return numeroBilletesVendidos;
     }
     public void imprimirNumeroBilletesVendidos(){
-        int NumeroBilletesVendidos = 0;
-        if (totalDineroAcumulado >= precioBillete) {
-            NumeroBilletesVendidos = totalDineroAcumulado / precioBillete;
-            System.out.println("Van" + NumeroBilletesVendidos + "billetes vendidos" );
+        if (numeroBilletesVendidos > 0) {
+            numeroBilletesVendidos = numeroBilletesVendidos;
+            System.out.println("Van" + numeroBilletesVendidos + "billetes vendidos" );
         }else{
             System.out.println("Van" + 0 + "billetes vendidos" );
         }
