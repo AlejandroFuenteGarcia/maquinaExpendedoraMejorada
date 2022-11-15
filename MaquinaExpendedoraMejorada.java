@@ -91,7 +91,24 @@ public class MaquinaExpendedoraMejorada {
         balanceClienteActual = 0;
         return cantidadDeDineroADevolver;
     }
-    
+    public int getNumeroDeBilletesVendidos(){
+        int NumeroDeBilletesVendidos = 0;
+        if (totalDineroAcumulado >= precioBillete){
+            NumeroDeBilletesVendidos = totalDineroAcumulado / precioBillete;
+        } else{
+            NumeroDeBilletesVendidos = 0;
+        }
+        return NumeroDeBilletesVendidos;
+    }
+    public void imprimirNumeroBilletesVendidos(){
+        int NumeroBilletesVendidos = 0;
+        if (totalDineroAcumulado >= precioBillete) {
+            NumeroBilletesVendidos = totalDineroAcumulado / precioBillete;
+            System.out.println("Van" + NumeroBilletesVendidos + "billetes vendidos" );
+        }else{
+            System.out.println("Van" + 0 + "billetes vendidos" );
+        }
+    }    
     public int vaciarDineroDeLaMaquina() {
         int vaciadoDeMaquina = totalDineroAcumulado + balanceClienteActual;
         if (balanceClienteActual == 0){
