@@ -30,7 +30,6 @@ public class MaquinaExpendedoraMejorada {
         estacionDestino = destino;
         numeroBilletesVendidos = 0;
         maquinaConPremio = maquinaPremio;
-        maximoDeBilletes = 0;
         maximoDeBilletes = maximoBilletes;
     }
     public MaquinaExpendedoraMejorada(boolean maquinaPremio, int maximoBilletes){
@@ -42,7 +41,6 @@ public class MaquinaExpendedoraMejorada {
         numeroBilletesVendidos = 0;
         maquinaConPremio = maquinaPremio;
         maximoDeBilletes = maximoBilletes;
-        maximoBilletes = 0;
     }
     /**
      * Devuelve el precio del billete
@@ -93,7 +91,9 @@ public class MaquinaExpendedoraMejorada {
                 System.out.println("##################");
                 System.out.println();      
                     if (maquinaConPremio == true){
+                    if (numeroBilletesVendidos == 3){
                     System.out.println("¡PREMIOOO! Tienes un descuento de " + precioBillete / 4 + " para gastar en el negocio que quieras");
+                }
                 }
         
                 // Actualiza el total de dinero acumulado en la maquina
