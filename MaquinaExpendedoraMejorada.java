@@ -30,8 +30,8 @@ public class MaquinaExpendedoraMejorada {
         estacionDestino = destino;
         numeroBilletesVendidos = 0;
         maquinaConPremio = maquinaPremio;
-        maximoDeBilletes = maximoBilletes;
         maximoDeBilletes = 0;
+        maximoDeBilletes = maximoBilletes;
     }
     public MaquinaExpendedoraMejorada(boolean maquinaPremio, int maximoBilletes){
         precioBillete = 20;
