@@ -91,9 +91,9 @@ public class MaquinaExpendedoraMejorada {
                 System.out.println("##################");
                 System.out.println();      
                     if (maquinaConPremio == true){
-                    if (numeroBilletesVendidos == 3){
-                    System.out.println("¡PREMIOOO! Tienes un descuento de " + precioBillete / 4 + " para gastar en el negocio que quieras");
-                }
+                        if (numeroBilletesVendidos == 3){
+                        System.out.println("¡PREMIOOO! Tienes un descuento de " + precioBillete / 4 + " para gastar en el negocio que quieras");
+                    }
                 }
         
                 // Actualiza el total de dinero acumulado en la maquina
