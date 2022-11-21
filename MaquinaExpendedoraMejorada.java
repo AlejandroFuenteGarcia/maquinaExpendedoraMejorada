@@ -77,8 +77,6 @@ public class MaquinaExpendedoraMejorada {
     public void imprimirBillete() {
         int cantidadDeDineroQueFalta;
         int numeroBilletes;
-        numeroBilletesVendidos = (numeroBilletesVendidos + 1 );
-        numeroBilletes = numeroBilletesVendidos % 4 ;
         cantidadDeDineroQueFalta = precioBillete - balanceClienteActual;
         if (maximoDeBilletes == numeroBilletesVendidos){
             System.out.println("Lo lamentamos se ha llegado al maximo de billetes vendidos");
@@ -91,9 +89,10 @@ public class MaquinaExpendedoraMejorada {
                 System.out.println("# De " + estacionOrigen + " a " + estacionDestino);
                 System.out.println("# " + precioBillete + " euros.");
                 System.out.println("##################");
-                System.out.println();      
+                System.out.println();
+                numeroBilletesVendidos = (numeroBilletesVendidos + 1 );
                 if (maquinaConPremio == true){
-                    if (numeroBilletes == 0){
+                    if (numeroBilletesVendidos % 4 == 0){
                         System.out.println("¡PREMIOOO! Tienes un descuento de " + precioBillete / 4 + " para gastar en el negocio que quieras");
                     }
                 }
